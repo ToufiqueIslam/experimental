@@ -45,6 +45,11 @@ nav {
   list-style-type: none;
 }
 
+.right ul li img{
+  width: 13px;
+  margin-left: 4px;
+}
+
 .button {
   margin-top: -4px;
   border: none;
