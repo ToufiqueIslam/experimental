@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./typed.js-master/lib/typed.min.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/
+       jquery/3.5.1/jquery.min.js">
+      </script>
 </head>
+
 <body>
   <header>
     <nav>
@@ -21,12 +29,12 @@
           <li class="list-item">Contact Us<img src="./assets/angle-down-solid.svg"></li>
           <li>
             <button class="button signup">
-              Sign Up
+              <p>Sign Up</p>
             </button>
           </li>
           <li>
             <button class=" button register">
-              Register
+              <p>Register</p>
             </button>
           </li>
         </ul>
@@ -35,15 +43,80 @@
   </header>
 
   <main>
-    <div class="contact-icons">
-      <ul class="icon">
-        <li style="--clr:background-image: linear-gradient(to right,#f9ce34,#ee2a7b,#6228d7);"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        <li style="--clr:#25D366"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-        <li style="--clr:#FF0000"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-        <li style="--clr:#0077B5"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-      </ul>
-      <span>Follow Me</span> 
+    <div class="container">
+      <div class="contact-icons">
+        <ul class="icon">
+          <li style="--clr:linear-gradient(to right,#f9ce34,#ee2a7b 60%,#6228d7);"><a
+              href="https://www.instagram.com/i.toufique/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li style="--clr:#25D366"><a href="https://wa.me/qr/NZ3NRJBDLOJZK1" target="_blank"><i
+                class="fa-brands fa-whatsapp"></i></a></li>
+          <li style="--clr:#FF0000"><a href="https://www.youtube.com/channel/UCSDCQekpRL6KbHbNjmaliNg"
+              target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+          <li style="--clr:#0077B5"><a href="https://www.linkedin.com/in/toufiqueislam/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+        <span>Follow Me</span>
+      </div>
+      <div class="bio">
+        <p>Welcome to my portfolio!</p>
+        <h1>Hi, I'm <span id="name">Toufique Islam</span></h1>
+        <p id="aboutpara">I’m a passionate full-stack developer from India with 50 years of hands-on experience crafting and
+          maintaining dynamic and responsive solutions. I thrive on turning ideas into interactive experiences.</p>
+          <button class="resume">
+            <p>My Resume</p>
+          </button>
+      </div>
+      <div class="mypic">
+        <!-- <img src="./assets/mypic.jpg"> -->
+      </div>
+      <!-- <div class="mypic bg"></div> -->
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
     </div>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+    integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    if ($(".text-slider").length == 1) {
+
+      var typed_strings =
+        $(".text-slider-items").text();
+
+      var typed = new Typed(".text-slider", {
+        strings: typed_strings.split(", "),
+        typeSpeed: 50,
+        loop: true,
+        backDelay: 900,
+        backSpeed: 30,
+      });
+    }
+  </script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".icon li a"), {
+      max: 50,
+      speed: 400,
+      glare: true,
+    });
+    VanillaTilt.init(document.querySelectorAll("button"), {
+      max: 10,
+      speed: 400,
+      glare: true,
+    });
+
+    // let list = document.querySelectorAll('.icon li a');
+    // let bg = document.querySelector('body');
+    // list.forEach(element => {
+    //   element.addEventListener("mouseenter", function (event) {
+    //     let color = event.target.style.getPropertyValue('--clr');
+    //     bg.style.backgroundColor = color;
+    //   })
+    //   element.addEventListener("mouseleave", function (event) {
+    //     bg.style.backgroundColor = '#fff';
+    //   })
+    // })
+  </script>
 </body>
+
 </html>
