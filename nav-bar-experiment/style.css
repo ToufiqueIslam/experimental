@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media screen and (max-width: 800px) {
+  .box{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    gap: 50px;
+  }
+  .contact-icons{
+    position: relative;
+    top: 20vh;
+  }
+  .bio{
+    display: flex;
+    margin-top: -10vh;
+    width: 90vw;
+    align-items: center;
+    font-size: small;
+  }
+}
+
+.box{
+  display: flex;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +46,12 @@
 header {
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav {
+  width: 100vw;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +67,7 @@ nav {
 }
 
 .bio {
-  width: 50vw;
+  width: 70%;
   /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
@@ -73,6 +101,7 @@ nav {
   padding: 0;
   font-weight: 700;
   font-size: 1em;
+  text-transform: uppercase;
 }
 
 .text-slider-items {
@@ -87,7 +116,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('./assets/me.png');
-  opacity: 80%;
+  opacity: 90%;
   /* box-shadow: 0 0 20px 30px white inset; */
   /* z-index: 1; */
 }
@@ -115,8 +144,9 @@ nav {
 } */
 
 .gradient-bottom {
-  position: absolute;
+  position: fixed;
   top: 70vh;
+  margin-top: auto;
   height: 30vh;
   width: 100vw;
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -237,6 +267,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 1;
 }
 
 .contact-icons ul li {
